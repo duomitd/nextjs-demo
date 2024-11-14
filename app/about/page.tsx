@@ -1,7 +1,6 @@
-import React from "react";
 import { getMdxContent } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { GetStaticProps, Metadata } from "next";
+import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const { metadata } = getMdxContent("abgerny.mdx");
