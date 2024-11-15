@@ -14,7 +14,7 @@ export default function Header() {
             </span>
           </Link>
         </div>
-        <nav className="flex space-x-6 text-sm">
+        {/* <nav className="flex space-x-6 text-sm">
           <Link href="/" className="hover:text-pink-500  hover:scale-125">
             HOMEPAGE
           </Link>
@@ -36,7 +36,7 @@ export default function Header() {
           >
             PRIVACY
           </Link>
-        </nav>
+        </nav> */}
       </div>
     </header>
   );
