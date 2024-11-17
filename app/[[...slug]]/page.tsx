@@ -84,7 +84,7 @@ export default async function GamePage({ params }: PropsType) {
         <div className="bg-gray-800 p-4 rounded-lg mb-6">
           <h2 className="text-2xl font-bold text-pink-500">Popular Games</h2>
         </div>
-        <div className="grid grid-cols-2 gap-x-2 gap-y-3">
+        <div className="grid grid-cols-3 sm:grid-col-2 lg:grid-cols-2 gap-x-2 gap-y-3">
           {popularGames?.map((game, index) => (
             <GameItem gameInfo={game} key={index} />
           ))}
