@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://www.fnfsprunki.top/sitemap.xml
+
+Crawl-delay: 10

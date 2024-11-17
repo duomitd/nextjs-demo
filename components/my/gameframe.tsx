@@ -4,6 +4,7 @@ import { GameInfo } from "@/interface/interface";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { Maximize } from "lucide-react";
 
 interface PropsType {
   gameInfo: GameInfo;
@@ -57,7 +58,10 @@ export default function Gameframe({ gameInfo }: PropsType) {
             allowFullScreen
           ></iframe>
           <div className=" bg-gray-800 w-full h-10 opacity-50">
-            <Button onClick={toggleFullscreen}>Full Screen</Button>
+            <Button onClick={toggleFullscreen}>
+              <Maximize />
+              Full Screen
+            </Button>
           </div>
         </div>
       )}
