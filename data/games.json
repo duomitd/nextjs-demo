@@ -68,5 +68,10 @@
     "slug": "sprunki-inverted",
     "gameUrl": "https://html-classic.itch.zone/html/11730858/index.html",
     "imageUrl": "/gameimg/Sprunki Inverted.png"
+  },
+  {
+    "slug": "sprunki-phase-1",
+    "gameUrl": "https://img.sprunki.net/game/Sprunki%20Phase3.html",
+    "imageUrl": "/gameimg/sprunki-phase-1.webp"
   }
 ]

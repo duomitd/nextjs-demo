@@ -62,34 +62,31 @@ export default async function GamePage({ params }: PropsType) {
   const popularGames = randomGameList();
 
   return (
-    <main className="flex-grow flex flex-col lg:flex-row items-start my-10  gap-8 w-10/12 max-w-7xl mx-auto">
-      {/* 左边部分 */}
-      <div className="w-full lg:w-3/4">
-        {/* 游戏框 */}
-        <div className="flex bg-gray-800 rounded-lg shadow-md w-full h-full min-h-[600px] mb-8 overflow-hidden">
-          <Gameframe gameInfo={gameInfo} />
-        </div>
-
-        {/* 游戏介绍 */}
-        <article
-          style={{ maxWidth: "100%", borderRadius: "0.5rem" }}
-          className="prose lg:prose-xl prose-invert prose-h2:text-pink-500 bg-gray-800 p-8 rounded-lg shadow-md w-full "
-        >
-          {gameInfo && <MDXRemote source={content} />}
-        </article>
+    <main className="flex flex-col justify-start items-center my-20 px-5 xl:w-4/5 mx-auto">
+      {/* 游戏框 */}
+      <div className="flex bg-gray-800 rounded-lg shadow-md w-full  min-h-[661px] mb-20 overflow-hidden">
+        <Gameframe gameInfo={gameInfo} />
       </div>
 
-      {/* 右侧推荐游戏列表 */}
-      <aside className="w-full lg:w-1/4 ">
-        <div className="bg-gray-800 p-4 rounded-lg mb-6">
-          <h2 className="text-2xl font-bold text-pink-500">Popular Games</h2>
+      {/* 推荐游戏列表 */}
+      <section className="w-full mb-20 bg-gray-800 p-4 lg:p-8 rounded-lg">
+        <div className="mb-6 text-xl font-bold text-white border-l-4 border-pink-500 px-2">
+          <span>Game Recommendations</span>
         </div>
-        <div className="grid grid-cols-3 sm:grid-col-2 lg:grid-cols-2 gap-x-2 gap-y-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-3">
           {popularGames?.map((game, index) => (
             <GameItem gameInfo={game} key={index} />
           ))}
         </div>
-      </aside>
+      </section>
+
+      {/* 游戏介绍 */}
+      <article
+        style={{ maxWidth: "100%", borderRadius: "0.5rem" }}
+        className="prose lg:prose-xl prose-invert prose-h2:text-pink-500 prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg bg-gray-800 p-4 lg:p-8 rounded-lg shadow-md w-full "
+      >
+        {gameInfo && <MDXRemote source={content} />}
+      </article>
     </main>
   );
 }

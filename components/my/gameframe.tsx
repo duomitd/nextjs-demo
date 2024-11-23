@@ -26,22 +26,25 @@ export default function Gameframe({ gameInfo }: PropsType) {
   return (
     <>
       {!isPlaying && (
-        <div className="flex-1 bg-black text-white justify-center items-center place-items-center">
-          <div className="relative w-1/2 h-1/2 mt-14">
+        <div className="flex-1 flex flex-col bg-black text-white justify-center items-center">
+          <div className="rounded-lg overflow-hidden border w-1/2">
             {gameInfo && (
               <Image
                 src={gameInfo?.imageUrl}
-                priority
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                width={1024}
+                height={768}
                 alt={gameInfo?.slug}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
               />
             )}
           </div>
 
           <Button
             onClick={() => setPlaying(true)}
-            className="bg-pink-500 hover:bg-pink-800 hover:scale-105 mt-14 rounded-full text-4xl font-medium p-8"
+            className="bg-pink-500 hover:bg-pink-800 mt-14 rounded-full text-2xl font-medium px-8 py-6 lg:scale-125"
           >
             <span>Play Now</span>
           </Button>
