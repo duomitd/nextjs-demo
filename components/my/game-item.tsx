@@ -1,7 +1,6 @@
 "use client";
 
 import { GameInfo } from "@/interface/interface";
-import { useRouter } from "next/navigation";
 import React from "react";
 import Image from "next/image";
 
@@ -10,13 +9,10 @@ interface PropsType {
 }
 
 export default function GameItem({ gameInfo }: PropsType) {
-  const router = useRouter();
-
   return (
-    <div
-      onClick={() => {
-        router.push(`/${gameInfo.slug}`);
-      }}
+    <a
+      href={`/${gameInfo.slug}`}
+      title={gameInfo.slug}
       className="group flex flex-col items-center justify-center rounded-lg h-[120px] bg-gray-300 hover:border-pink-500 hover:border-4 cursor-pointer"
     >
       <div className="flex-1 relative w-full">
@@ -32,6 +28,6 @@ export default function GameItem({ gameInfo }: PropsType) {
           <p className="text-xs text-center  text-white">{gameInfo.slug}</p>
         </div>
       </div>
-    </div>
+    </a>
   );
 }

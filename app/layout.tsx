@@ -29,7 +29,9 @@ export default function RootLayout({
           {/* 头部 */}
           <Header />
 
-          {children}
+          <div className="lg:container flex-1 justify-start items-center my-20 px-6 w-full xl:w-4/5 mx-auto">
+            {children}
+          </div>
 
           {/* 底部 */}
           <Footer />

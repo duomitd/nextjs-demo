@@ -62,9 +62,9 @@ export default async function GamePage({ params }: PropsType) {
   const popularGames = randomGameList();
 
   return (
-    <main className="flex flex-col justify-start items-center my-20 px-5 xl:w-4/5 mx-auto">
+    <main>
       {/* 游戏框 */}
-      <div className="flex bg-gray-800 rounded-lg shadow-md w-full  min-h-[661px] mb-20 overflow-hidden">
+      <div className="flex bg-gray-800 rounded-lg shadow-md w-full   mb-20 overflow-hidden">
         <Gameframe gameInfo={gameInfo} />
       </div>
 
